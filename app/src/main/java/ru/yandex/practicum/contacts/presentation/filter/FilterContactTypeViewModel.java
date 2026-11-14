@@ -63,7 +63,7 @@ public class FilterContactTypeViewModel extends BaseBottomSheetViewModel {
     private void updateFilterContactTypes() {
         String[] types = ContactType.getContactTypes();
         List<FilterContactTypeUi> filterContactTypes = new ArrayList<>();
-
+        filterContactTypes.add(createAllSelectedItem(types));
         for (String type : types) {
             filterContactTypes.add(createFilterContactType(type));
         }
